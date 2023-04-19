@@ -42,10 +42,5 @@ pipeline{
             ansiblePlaybook credentialsId: 'ansiblecreds', disableHostKeyChecking: true, installation: 'ansible', inventory: '/etc/ansible/hosts', playbook: 'insure.yml'
          } 
       }
-     stage('jar selenium'){
-        steps{
-           sh 'java -jar insuredomain.jar'
-       }
-    }
    }
 }
